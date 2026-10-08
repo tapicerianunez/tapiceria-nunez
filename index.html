@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAPICERÍA Nuñez | Catálogo y Trabajos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="modal-imagen" class="modal-visor" onclick="cerrarModalImagen(event)">
+        <span class="cerrar-modal" onclick="cerrarModalImagen(event)">&times;</span>
+        <button class="nav-modal prev-modal" onclick="navegarModal(-1)">&#10094;</button>
+        <img class="contenido-modal" id="img-ampliada" alt="Vista previa ampliada">
+        <button class="nav-modal next-modal" onclick="navegarModal(1)">&#10095;</button>
+    </div>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="#" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="img/logo_3.png" alt="Logo Tapicería Nuñez" class="img-logo">
+                <h2>TAPICERÍA <span>Nuñez</span></h2>
+            </a>
+        </div>
+
+        <button id="theme-toggle" class="btn-theme-toggle" aria-label="Cambiar modo claro/oscuro">
+            <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+
+        <nav>
+            <a href="#trabajos">Nuestros Trabajos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Especialistas en Restauración y Fabricación de Muebles</h1>
+            <p>Hacemos todo tipo de trabajos de tapicería a medida. Cotiza tu proyecto con nosotros.</p>
+        </div>
+    </section>
+
+    <section id="trabajos" class="seccion">
+        <h2>Trabajos Realizados</h2>
+        <p class="subtitulo">Restauraciones integrales y muebles fabricados desde cero</p>
+
+        <div class="contenedor-tarjetas">
+
+            <div class="tarjeta">
+                <div class="carrusel" id="carrusel-trabajo-1">
+                    <button class="btn-carrusel prev" onclick="moverCarrusel('carrusel-trabajo-1', -1)">❮</button>
+                    <div class="contenedor-imagenes">
+                        <img class="img-slide active" src="img/Retapizado_sofa_2.jpeg" alt="Retapizado de sofá">
+                        <img class="img-slide" src="img/Retapizado_sofa.jpeg" alt="Retapizado de sofá">
+                        <img class="img-slide" src="img/Retapisado_pana_verde_petroleo.jpeg" alt="Retapizado pana verde petróleo">
+                        <img class="img-slide" src="img/Sofa_Retapizado_Después.jpeg" alt="Sofá después del retapizado">
+                    </div>
+                    <button class="btn-carrusel next" onclick="moverCarrusel('carrusel-trabajo-1', 1)">❯</button>
+                </div>
+                <span class="etiqueta-tipo">Restauración</span>
+                <h3>Retapizado</h3>
+                <p>Cambio de espuma, refuerzo de estructura de madera y tapizado en tela de preferencia del cliente.</p>
+            </div>
+
+            <div class="tarjeta">
+                <div class="carrusel" id="carrusel-trabajo-2">
+                    <button class="btn-carrusel prev" onclick="moverCarrusel('carrusel-trabajo-2', -1)">❮</button>
+                    <div class="contenedor-imagenes">
+                        <img class="img-slide active" src="img/F_p.jpeg" alt="Fabricación propia">
+                        <img class="img-slide" src="img/F_p_1.jpeg" alt="Fabricación propia 1">
+                        <img class="img-slide" src="img/F_p_2.jpeg" alt="Fabricación propia 2">
+                        <img class="img-slide" src="img/F_p_3.jpeg" alt="Fabricación propia 3">
+                        <img class="img-slide" src="img/F_p_4.jpeg" alt="Fabricación propia 4">
+                        <img class="img-slide" src="img/F_p_5.jpeg" alt="Fabricación propia 5">
+                        <img class="img-slide" src="img/F_p_6.jpeg" alt="Fabricación propia 6">
+                        <img class="img-slide" src="img/F_p_7.jpeg" alt="Fabricación propia 7">
+                        <img class="img-slide" src="img/F_p_8.jpeg" alt="Fabricación propia 8">
+                        <img class="img-slide" src="img/Sillon_F_propia.jpeg" alt="Sillón fabricación propia">
+                        <img class="img-slide" src="img/Sofa_F_propia_2.jpeg" alt="Sofá fabricación propia 2">
+                        <img class="img-slide" src="img/Sofa_F_propia_3.jpeg" alt="Sofá fabricación propia 3">
+                        <img class="img-slide" src="img/Sofa_F_propia_4.jpeg" alt="Sofá fabricación propia 4">
+                        <img class="img-slide" src="img/Sofa_F_propia_1.jpeg" alt="Sofá fabricación propia 1">
+                        <img class="img-slide" src="img/Sofa_2_Fabricacion_Propia.jpeg" alt="Sofá 2 fabricación propia">
+                        <img class="img-slide" src="img/Juego_Sofa_Negro_Fabricacion_Propia.jpeg" alt="Juego de sofá negro fabricación propia">
+                        <img class="img-slide" src="img/Juego_Comedor_pana.jpeg" alt="Juego comedor pana">
+                        <img class="img-slide" src="img/Juego_sillas_F_propia.jpeg" alt="Juego de sillas fabricación propia">
+                        <img class="img-slide" src="img/sofaa_F_Propia.jpeg" alt="Sofa fabricacion propia">
+                        <img class="img-slide" src="img/sofa_sillon_F_Propia.jpeg" alt="Sofa Sillon fabricacion propia">
+                    </div>
+                    <button class="btn-carrusel next" onclick="moverCarrusel('carrusel-trabajo-2', 1)">❯</button>
+                </div>
+                <span class="etiqueta-tipo fabricacion">Fabricación desde Cero</span>
+                <p>Diseño y fabricación personalizada de muebles a medida según el espacio y gusto del cliente.</p>
+            </div>
+
+            <div class="tarjeta">
+                <div class="carrusel" id="carrusel-trabajo-3">
+                    <button class="btn-carrusel prev" onclick="moverCarrusel('carrusel-trabajo-3', -1)">❮</button>
+                    <div class="contenedor-imagenes">
+                        <img class="img-slide active" src="img/Sillon_Modificado.jpeg" alt="Sillón modificado">
+                        <img class="img-slide" src="img/silla_1.jpeg" alt="Silla 1">
+                        <img class="img-slide" src="img/silla_2.jpeg" alt="Silla 2">
+                        <img class="img-slide" src="img/silla_3.jpeg" alt="Silla 3">
+                        <img class="img-slide" src="img/silla_4.jpeg" alt="Silla 4">
+                        <img class="img-slide" src="img/silla_5.jpeg" alt="Silla 5">
+                        <img class="img-slide" src="img/silla_6.jpeg" alt="Silla 6">
+                    </div>
+                    <button class="btn-carrusel next" onclick="moverCarrusel('carrusel-trabajo-3', 1)">❯</button>
+                </div>
+                <span class="etiqueta-tipo">Restauración</span>
+                <h3>Juego de Sillas de Comedor</h3>
+                <p>Lustrado de madera y retapizado en tela antimanchas fácil de limpiar o con tela de preferencia del cliente.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="telas" class="seccion bg-gris">
+        <h2>Contamos con todas las telas y texturas del mercado. Te asesoramos según tu necesidad y presupuesto.</h2>
+    </section>
+
+    <section id="contacto" class="seccion">
+        <h2>¿Tienes un proyecto en mente?</h2>
+        <p class="subtitulo">Escríbenos directamente para cotizar o consultar tus dudas sobre restauración o fabricación</p>
+
+        <div class="caja-contacto">
+            <form id="form-consulta" class="formulario-directo">
+                <div class="grupo-campo">
+                    <label for="tipo_trabajo">¿Qué tipo de trabajo necesitas?</label>
+                    <select id="tipo_trabajo">
+                        <option value="Restauración / Retapizado">Restauración o Retapizado de mueble existente</option>
+                        <option value="Fabricación desde Cero">Fabricación de mueble nuevo a medida</option>
+                        <option value="Consulta General">Tengo dudas / Quiero asesoramiento</option>
+                    </select>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="mensaje_usuario">Detalles de tu mueble o idea (opcional):</label>
+                    <textarea id="mensaje_usuario" rows="3" placeholder="Ej: Tengo un juego de 6 sillas para tapizar o quiero fabricar un sofá de 2 metros..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-whatsapp grande">
+                    <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp con el Tapicero
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
