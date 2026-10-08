@@ -29,6 +29,7 @@ body.dark-mode {
     --input-borde: #475569;
 }
 
+/* Selector universal corregido con asterisco */
 * {
     margin: 0;
     padding: 0;
