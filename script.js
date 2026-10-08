@@ -110,14 +110,14 @@ function cerrarModalImagen(event) {
     }
 }
 
-// --- LÓGICA DE MODO OSCURO (CORREGIDA) ---
+// --- LÓGICA DE MODO OSCURO ---
 function inicializarModoOscuro() {
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
 
     if (!themeToggleBtn) return;
 
-    // Cargar preferencia guardada previamente
+    // Cargar preferencia guardada
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
@@ -130,13 +130,9 @@ function inicializarModoOscuro() {
     themeToggleBtn.addEventListener('click', (e) => {
         e.preventDefault();
         
-        // Alternar clase en el body
         const isDark = document.body.classList.toggle('dark-mode');
-        
-        // Guardar estado en localStorage
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
 
-        // Cambiar el icono inmediatamente
         if (themeIcon) {
             themeIcon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
         }
