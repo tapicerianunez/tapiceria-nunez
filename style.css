@@ -8,17 +8,25 @@
     --tarjeta-borde: #e2e8f0;
     --header-bg: #1a365d;
     --header-texto: #ffffff;
+    --hero-overlay: rgba(26, 54, 93, 0.85);
+    --input-bg: #ffffff;
+    --input-texto: #1e293b;
+    --input-borde: #cbd5e0;
 }
 
 body.dark-mode {
     --bg-principal: #0f172a;
     --bg-secundario: #1e293b;
     --texto-principal: #f8fafc;
-    --texto-secundario: #94a3b8;
+    --texto-secundario: #cbd5e0;
     --tarjeta-bg: #1e293b;
     --tarjeta-borde: #334155;
-    --header-bg: #0f172a;
+    --header-bg: #0b1329;
     --header-texto: #f8fafc;
+    --hero-overlay: rgba(15, 23, 42, 0.92);
+    --input-bg: #334155;
+    --input-texto: #ffffff;
+    --input-borde: #475569;
 }
 
 * {
@@ -35,7 +43,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* --- 2. NAVEGACIÓN --- */
+/* --- 2. NAVEGACIÓN Y MENÚ --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -54,7 +62,7 @@ body {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: white;
+    color: var(--header-texto);
 }
 
 .img-logo {
@@ -69,12 +77,13 @@ body {
 }
 
 .navbar nav a {
-    color: white;
+    color: var(--header-texto);
     text-decoration: none;
     margin-left: 1.5rem;
     font-weight: 400;
 }
 
+/* BOTÓN MODO OSCURO */
 .btn-theme-toggle {
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.3);
@@ -94,15 +103,16 @@ body {
     transform: scale(1.08);
 }
 
-/* --- 3. HERO / BANNER --- */
+/* --- 3. HERO / BANNER PRINCIPAL --- */
 .hero {
-    background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.85)), 
+    background: linear-gradient(var(--hero-overlay), var(--hero-overlay)), 
                 url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80');
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
     padding: 5rem 1rem;
+    transition: background 0.3s ease;
 }
 
 .hero-content h1 {
@@ -115,15 +125,16 @@ body {
     margin-bottom: 2rem;
 }
 
-/* --- 4. SECCIONES Y CONTENEDORES --- */
+/* --- 4. SECCIONES GENERALES --- */
 .seccion {
     padding: 4rem 5%;
     text-align: center;
+    background-color: var(--bg-principal);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .seccion.bg-gris {
     background-color: var(--bg-secundario);
-    transition: background-color 0.3s ease;
 }
 
 .subtitulo, .tarjeta p, .item-tela p {
@@ -134,7 +145,7 @@ body {
     color: var(--texto-principal);
 }
 
-/* --- 5. CARRUSEL DE IMÁGENES --- */
+/* --- 5. CARRUSEL --- */
 .carrusel {
     position: relative;
     width: 100%;
@@ -216,7 +227,7 @@ body {
     background-color: #d69e2e;
 }
 
-/* --- 7. FORMULARIO DE CONTACTO --- */
+/* --- 7. FORMULARIO DE CONTACTO DIRECTO --- */
 .caja-contacto {
     max-width: 550px;
     margin: 0 auto;
@@ -236,16 +247,18 @@ body {
     display: block;
     margin-bottom: 0.4rem;
     font-weight: 600;
+    color: var(--texto-principal);
 }
 
 .grupo-campo select, .grupo-campo textarea {
     width: 100%;
     padding: 0.7rem;
-    border: 1px solid var(--tarjeta-borde);
-    background-color: var(--bg-principal);
-    color: var(--texto-principal);
+    border: 1px solid var(--input-borde);
+    background-color: var(--input-bg);
+    color: var(--input-texto);
     border-radius: 5px;
     font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-whatsapp {
@@ -268,7 +281,7 @@ body {
     background-color: #1ebe57;
 }
 
-/* --- 8. MODAL / LIGHTBOX (PANTALLA COMPLETA) --- */
+/* --- 8. VISOR PANTALLA COMPLETA (MODAL) --- */
 .modal-visor {
     display: none; 
     position: fixed; 
