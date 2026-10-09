@@ -1,4 +1,3 @@
-// --- LÓGICA DE NAVEGACIÓN DE CARRUSELES EN LA PÁGINA ---
 function moverCarrusel(carruselId, direccion) {
     const carrusel = document.getElementById(carruselId);
     if (!carrusel) return;
@@ -26,7 +25,6 @@ function moverCarrusel(carruselId, direccion) {
     imagenes[nuevoIndice].classList.add('active');
 }
 
-// --- REDIRECCIÓN DIRECTA A WHATSAPP ---
 function inicializarFormularioWhatsApp() {
     const formConsulta = document.getElementById('form-consulta');
     if (formConsulta) {
@@ -52,7 +50,6 @@ function inicializarFormularioWhatsApp() {
     }
 }
 
-// --- LÓGICA DEL VISOR EN PANTALLA COMPLETA (MODAL) ---
 let imagenesGrupo = [];
 let indiceActual = 0;
 
@@ -110,14 +107,12 @@ function cerrarModalImagen(event) {
     }
 }
 
-// --- LÓGICA DE MODO OSCURO ---
 function inicializarModoOscuro() {
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
 
     if (!themeToggleBtn) return;
 
-    // Cargar preferencia guardada
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
@@ -126,7 +121,6 @@ function inicializarModoOscuro() {
         }
     }
 
-    // Escuchar clic en el botón
     themeToggleBtn.addEventListener('click', (e) => {
         e.preventDefault();
         
@@ -139,7 +133,6 @@ function inicializarModoOscuro() {
     });
 }
 
-// --- ASIGNAR EVENTOS GLOBALES AL CARGAR LA PÁGINA ---
 document.addEventListener('DOMContentLoaded', () => {
     inicializarModoOscuro();
     inicializarFormularioWhatsApp();
