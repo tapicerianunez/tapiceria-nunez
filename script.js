@@ -31,7 +31,7 @@ function inicializarFormularioWhatsApp() {
         formConsulta.addEventListener('submit', function(event) {
             event.preventDefault();
 
-            const numeroTelefono = "595962125194";
+            const numeroTelefono = "595976161642";
             const tipoTrabajo = document.getElementById('tipo_trabajo').value;
             const detalles = document.getElementById('mensaje_usuario').value;
 
