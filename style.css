@@ -1,4 +1,3 @@
-/* --- 1. CONFIGURACIÓN GENERAL Y VARIABLES --- */
 :root {
     --bg-principal: #ffffff;
     --bg-secundario: #f8fafc;
@@ -44,7 +43,6 @@ body {
     overflow-x: hidden;
 }
 
-/* --- 2. NAVEGACIÓN Y MENÚ --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -55,7 +53,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    transition: background-color 0.3s ease;
     flex-wrap: wrap;
     gap: 10px;
 }
@@ -98,7 +95,6 @@ body {
     white-space: nowrap;
 }
 
-/* BOTÓN MODO OSCURO */
 .btn-theme-toggle {
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.3);
@@ -118,7 +114,6 @@ body {
     transform: scale(1.08);
 }
 
-/* --- 3. HERO / BANNER PRINCIPAL --- */
 .hero {
     background: linear-gradient(var(--hero-overlay), var(--hero-overlay)), 
                 url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80');
@@ -127,7 +122,6 @@ body {
     color: white;
     text-align: center;
     padding: 4rem 1.2rem;
-    transition: background 0.3s ease;
 }
 
 .hero-content h1 {
@@ -141,7 +135,6 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* --- 4. SECCIONES GENERALES --- */
 .seccion {
     padding: 3rem 5%;
     text-align: center;
@@ -155,17 +148,18 @@ body {
 
 .seccion h2 {
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.subtitulo, .tarjeta p, .item-tela p {
+.subtitulo, .tarjeta p {
     color: var(--texto-secundario);
+    margin-bottom: 1.5rem;
 }
 
-.tarjeta h3, .item-tela h4, .seccion h2 {
+.tarjeta h3, .seccion h2 {
     color: var(--texto-principal);
 }
 
-/* --- 5. CARRUSEL --- */
 .carrusel {
     position: relative;
     width: 100%;
@@ -209,7 +203,6 @@ body {
 .btn-carrusel.prev { left: 10px; }
 .btn-carrusel.next { right: 10px; }
 
-/* --- 6. TARJETAS DE TRABAJOS --- */
 .contenedor-tarjetas {
     display: flex;
     gap: 1.5rem;
@@ -226,7 +219,6 @@ body {
     max-width: 340px;
     text-align: left;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .tarjeta h3, .tarjeta p {
@@ -248,7 +240,43 @@ body {
     background-color: #d69e2e;
 }
 
-/* --- 7. FORMULARIO DE CONTACTO DIRECTO --- */
+/* CAJA DE UBICACIÓN */
+.caja-ubicacion {
+    max-width: 500px;
+    margin: 0 auto;
+    background: var(--tarjeta-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--tarjeta-borde);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.caja-ubicacion p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--texto-principal);
+}
+
+.btn-mapa {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #2b6cb0;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-mapa:hover {
+    background-color: #23528c;
+}
+
 .caja-contacto {
     width: 100%;
     max-width: 550px;
@@ -258,7 +286,6 @@ body {
     border-radius: 8px;
     border: 1px solid var(--tarjeta-borde);
     text-align: left;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .grupo-campo {
@@ -281,7 +308,6 @@ body {
     color: var(--input-texto);
     border-radius: 5px;
     font-size: 0.95rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-whatsapp {
@@ -304,7 +330,6 @@ body {
     background-color: #1ebe57;
 }
 
-/* --- 8. VISOR PANTALLA COMPLETA (MODAL) --- */
 .modal-visor {
     display: none; 
     position: fixed; 
@@ -323,7 +348,6 @@ body {
     max-width: 90%;
     max-height: 80vh;
     border-radius: 8px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
     object-fit: contain;
 }
 
@@ -355,35 +379,21 @@ body {
 .prev-modal { left: 10px; }
 .next-modal { right: 10px; }
 
-/* --- 9. ADAPTACIÓN PARA CELULARES (MOBILE RESPONSIVE) --- */
 @media (max-width: 600px) {
     .navbar {
         padding: 0.8rem 1rem;
-        justify-content: space-between;
     }
-
     .logo h2 {
         font-size: 1rem;
     }
-
     .img-logo {
         height: 28px;
     }
-
     .navbar nav a {
         margin-left: 0.5rem;
         font-size: 0.82rem;
     }
-
     .hero-content h1 {
         font-size: 1.4rem;
-    }
-
-    .hero-content p {
-        font-size: 0.9rem;
-    }
-
-    .caja-contacto {
-        padding: 1rem;
     }
 }
